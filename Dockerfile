@@ -31,3 +31,5 @@ COPY --from=tra_img_maker /TR_image.jpg /usr/local/apache2/htdocs/TR_image.jpg
 COPY --from=bw_img_maker /index.html /usr/local/apache2/htdocs/index.html
 
 EXPOSE 80
+
+HEALTHCHECK CMD curl localhost:80
